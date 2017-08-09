@@ -270,7 +270,7 @@ class MainLogger extends \AttachableThreadedLogger {
 			}
 		}
 
-		$message = TextFormat::toANSI(TextFormat::AQUA . "GenisysPro> " . TextFormat::GRAY . $message . TextFormat::RESET);
+		$message = TextFormat::toANSI(TextFormat::AQUA . "GenisysPro> " . TextFormat::GREEN . "[ . date("H:i:s", $now) . " ] " .TextFormat::GRAY . $message . TextFormat::RESET);
 		$cleanMessage = TextFormat::clean($message);
 
 		if(!Terminal::hasFormattingCodes()){
