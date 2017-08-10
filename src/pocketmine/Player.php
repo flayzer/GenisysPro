@@ -257,11 +257,11 @@ class Player extends Human implements CommandSender, InventoryHolder, ChunkLoade
 
 	//TODO: Abilities
 	protected $autoJump = true;
-	protected $allowFlight = false;
+	protected $allowFlight = true;
 	protected $flying = false;
 
-	protected $allowMovementCheats = false;
-	protected $allowInstaBreak = false;
+	protected $allowMovementCheats = true;
+	protected $allowInstaBreak = true;
 
 	private $needACK = [];
 
