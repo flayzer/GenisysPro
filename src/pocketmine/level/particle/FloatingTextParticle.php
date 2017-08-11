@@ -22,7 +22,7 @@
 namespace pocketmine\level\particle;
 
 use pocketmine\entity\Entity;
-use pocketmine\entity\Item as ItemEntity;
+use pocketmine\item\Item;
 use pocketmine\math\Vector3;
 use pocketmine\network\protocol\AddEntityPacket;
 use pocketmine\network\protocol\RemoveEntityPacket;
@@ -107,9 +107,9 @@ class FloatingTextParticle extends Particle {
 
 			$pk = new AddEntityPacket();
 			$pk->eid = $this->entityId;
-			$pk->type = ItemEntity::NETWORK_ID;
+			$pk->type = Item::NETWORK_ID;
 			$pk->x = $this->x;
-			$pk->y = $this->y - 0.75;
+			$pk->y = $this->y - 0.50;
 			$pk->z = $this->z;
 			$pk->speedX = 0;
 			$pk->speedY = 0;
